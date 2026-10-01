@@ -1,0 +1,23 @@
+{
+  "name": "@panda/paws",
+  "version": "0.1.0",
+  "private": true,
+  "description": "The Panda CLI — resolve, validate, and run @panda/kernel manifests from the terminal. Phase 6, implemented — see SPEC.md.",
+  "bin": {
+    "paws": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs --dts --clean",
+    "dev": "npm run build -- --watch src"
+  },
+  "dependencies": {
+    "@panda/command": "*",
+    "@panda/kernel": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.8",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5"
+  }
+}
